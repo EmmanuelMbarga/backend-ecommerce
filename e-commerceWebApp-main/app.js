@@ -23,6 +23,7 @@ app.use(cors(corsOptions))
 app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 app.use(cookieparser())
+app.use('/public', express.static('public'))
 //jwt
 app.get("*",verifyconnexion)
 app.get("/veryfieuser/jwt",verifyuser,(req,res)=>{
