@@ -1,7 +1,6 @@
 const Errconnexion=(error)=>{
     let Errors={email:'',password:''}
 
-
     if (error.message.includes('email incorret')) {
         Errors.email='email incorrecte veuillez réessayer svp.'
     }

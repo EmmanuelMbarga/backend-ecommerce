@@ -1,10 +1,3 @@
-/**
- * nom:string
- * prenom:string 
- * email:string
- * password:string and number
- * */ 
-
 const mongoose=require('mongoose')
 const {isEmail} =require('validator')
 const bcrypt=require('bcrypt')
@@ -13,14 +6,12 @@ const utlisateurSchema=new mongoose.Schema({
     nom:{
         type:String,
         require:true,
-        unique:false,
         minlength:4,
         maxlength:20
     },
     prenom:{
         type:String,
         require:true,
-        unique:false,
         minlength:4,
         maxlength:20
     },
@@ -28,17 +19,12 @@ const utlisateurSchema=new mongoose.Schema({
         type:String,
         require:true,
         unique:true,
-        minlength:13,
-        maxlength:40,
-        lowercase:true,
         validate:[isEmail]
     },
     password:{
         type:String,
         require:true,
-        unique:true,
         minlength:5,
-        maxlength:1420
     }
 },
 {
@@ -63,7 +49,7 @@ utlisateurSchema.statics.login=async function(email,password){
             throw Error('mot de passe incorrect')
         }
     } else {
-        throw Error('email incorret')
+        throw Error('email incorrect')
     }
 }
 

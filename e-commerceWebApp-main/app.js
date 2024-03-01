@@ -31,8 +31,8 @@ app.get("/veryfieuser/jwt",verifyuser,(req,res)=>{
 
 //route app
 
-app.use('/app/shan-ecommerce', Routeutilisateur)
-app.use('/app/shan-ecommerce/article', Routearticle)
+app.use('/api/v1/user', Routeutilisateur)
+app.use('/api/v1/article', Routearticle)
 
 app.listen(process.env.PORT,()=>{
     console.log('le serveur fonction bien au port :'+process.env.PORT);

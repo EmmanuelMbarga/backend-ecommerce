@@ -4,13 +4,15 @@
   "description": "backent e-commerce",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "dev": "nodemon app",
-    "build":"npm build"
+    "build": "npm build"
   },
   "author": "emmanuelmbarga",
   "license": "ISC",
   "dependencies": {
     "@hachther/mesomb": "^1.1.1",
+    "@hapi/joi": "^17.1.1",
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
